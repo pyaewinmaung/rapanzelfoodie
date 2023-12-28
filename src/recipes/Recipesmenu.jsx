@@ -1,5 +1,6 @@
 import React from 'react'
 import Recipesitem from './Recipesitem'
+import Popular from '../popular/Popular'
 
 const Recipesmenu = () => {
   return (
@@ -17,6 +18,8 @@ const Recipesmenu = () => {
 
             </div>
         </section>
+
+        <Popular/>
     </>
   )
 }

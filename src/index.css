@@ -388,3 +388,13 @@ header{
    margin-left: 0;
  }
 }
+
+/* Start Register  */
+.registers{
+  width: 500px;
+  margin-top: 120px;
+  background: #f4f4f4;
+  padding: 40px 80px;
+  border-radius: 10px;
+}
+/* End Register  */
