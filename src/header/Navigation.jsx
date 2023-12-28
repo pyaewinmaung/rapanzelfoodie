@@ -8,7 +8,7 @@ const Navigation = () => {
 			<header>
 
 				{/* Start nav bar  */}
-				<div class="container">
+				<div className="container">
 					<nav className="navbar navbar-expand-lg fixed-top">
 
 						<a href="index.html" className="navbar-brand">
@@ -23,10 +23,10 @@ const Navigation = () => {
 
 						<div id="nav" className="navbar-collapse collapse justify-content-end text-uppercase gap-3 spa fw-bold">
 							<ul className="navbar-nav">
-								<Navitem navname="Home" />
-								<Navitem navname="Recipes" />
-								<Navitem navname="About Us" />
-								<Navitem navname="Contact" />
+								<Navitem navname="Home" navlink="home" />
+								<Navitem navname="Recipes"  navlink="recipes" />
+								<Navitem navname="About Us"  navlink="about" />
+								<Navitem navname="Contact"  navlink="contact" />
 							</ul>
 
 							<div className="d-flex">
