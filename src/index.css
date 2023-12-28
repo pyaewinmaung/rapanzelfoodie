@@ -180,12 +180,71 @@ header{
 .recipeimgs{
 	max-height: 320px;
 }
+
+.popularimgs{
+	width: 100%;
+	height: 100%;
+}
+
+.dissoves{
+	height: 170px;
+	border-radius: 20px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.recentnames{
+	font-weight: 600;
+	background: #ffffff65;
+	padding: 2px 5px;
+
+	position: absolute;
+	right: -50%;
+	bottom: 10px;
+
+	opacity: 0;
+
+	transition: all .3s ease;
+}
+
+.dissoves:hover .recentnames{
+	right: 0;
+	opacity: 1;
+}
+
+.dissoves img{
+	width: 100%;
+	height: 100%;
+	transition: all .3s linear;
+}
+
+.dissoves:hover img{
+	transform: scale(1.15);
+}
+
+.dissoves::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #30303057;
+	transition: all .3s linear;
+
+	position: absolute;
+	z-index: 2;
+}
+
+.dissoves:hover::before{
+	background: none;
+}
+
+
 /* End Recipes  */
 
 /*Start button  */
-.btncos{
+/* .btncos{
 	
-}
+} */
 /* End Button */
 
 /* Contact form  */

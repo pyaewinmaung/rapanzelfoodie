@@ -7,6 +7,7 @@ import Contact from "./contact/Contact";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Footer from "./footer/footer";
 
+
 const App = () => {
   const queryClient = new QueryClient();
 
