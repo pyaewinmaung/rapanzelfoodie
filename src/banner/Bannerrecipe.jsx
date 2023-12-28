@@ -1,5 +1,6 @@
 import React from 'react'
 import Banneritem from './Banneritem'
+import Recipesmenu from '../recipes/Recipesmenu'
 
 const Bannerrecipe = () => {
     return (
@@ -41,6 +42,8 @@ const Bannerrecipe = () => {
 
 
             </div>
+
+            <Recipesmenu/>
         </>
     )
 }
