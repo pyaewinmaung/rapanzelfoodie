@@ -8,7 +8,7 @@ const Navigation = () => {
 			<header>
 
 				{/* Start nav bar  */}
-				<div class="container">
+				<div className="container">
 					<nav className="navbar navbar-expand-lg fixed-top">
 
 						<a href="index.html" className="navbar-brand">

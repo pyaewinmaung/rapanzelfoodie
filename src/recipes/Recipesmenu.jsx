@@ -10,9 +10,9 @@ const Recipesmenu = () => {
                 {/* for recipies form  */}
 
                 <div className="row">
-                  <Recipesitem/>  
-                  <Recipesitem/>  
-                  <Recipesitem/>  
+                  <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert"/>  
+                  <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert"/>   
+                  <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert"/>  
                 </div>
 
             </div>
