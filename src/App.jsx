@@ -7,6 +7,7 @@ import Contact from "./contact/Contact";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Footer from "./footer/footer";
 import Register from "./auth/register/Register";
+import Recipesmenu from "./recipes/Recipesmenu";
 
 
 const App = () => {
@@ -14,21 +15,24 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
-        <QueryClientProvider client={queryClient}>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+
           <Navigation />
           <Routes>
-            <Route path="/" elemtent={<Navigation/>}/>
+            <Route path="/" elemtent={<Navigation />} />
             <Route index element={<Bannerrecipe />} />
             <Route path="home" element={<Bannerrecipe />} />
             <Route path="about" element={<About />} />
+            <Route path="recipes" element={<Recipesmenu />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="register" element={<Register/>}/>
+            <Route path="register" element={<Register />} />
           </Routes>
-          <Footer/>
+          <Footer />
           {/* <Login/> */}
-        </QueryClientProvider>
-      </BrowserRouter>
+
+        </BrowserRouter>
+      </QueryClientProvider>
     </>
   );
 };
