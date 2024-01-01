@@ -35,7 +35,7 @@ const Navigation = () => {
 								</form>
 
 								<div>
-									<a href="#" target="_blank">
+									<a href="register" target="_blank">
 										<img src={userimage} alt="user1" className="userimgs" />
 									</a>
 								</div>
