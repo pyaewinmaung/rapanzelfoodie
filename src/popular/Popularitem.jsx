@@ -1,6 +1,7 @@
 import React from 'react'
 import seafood from '../assets/img/receipes/seafood.jpg'
-import ButtonCo from '../conents/ButtonCo'
+import Button from '../components/buttons/Button'
+
 
 const Popularitem = () => {
     return (
@@ -21,7 +22,7 @@ const Popularitem = () => {
                     <p className="h5 fw-bold">Bean Slad</p>
                     <p className="text-muted">Figma ipsum component variant main layer. Text team line insert.</p>
 
-                    <ButtonCo name="Buy" />
+                    <Button name="Buy" />
                 </div>
             </div>
         </>
