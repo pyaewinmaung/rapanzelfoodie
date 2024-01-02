@@ -3,19 +3,19 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>       
-  <footer className="bg-warning pt-5 pb-2">
-    <div className="container text-center">
-      <div className='row '>
-        <div className='col d-flex flex-column mt-3'>
-          <h5 className='text-uppercase mb-4 fw-bold'> Quick Link </h5>
-          <ul className='list-inline text-start mx-auto'>
-            <li className=''><a href="#" className='text-decoration-none text-dark'>Home</a></li>
-            <li className=''><a href="#" className='text-decoration-none text-dark'>Recipes</a></li>
-            <li className=''><a href="#" className='text-decoration-none text-dark'>Populars</a></li>
-            <li className=''><a href="#" className='text-decoration-none text-dark'>About Us</a></li>
-            <li className=''><a href="#" className='text-decoration-none text-dark'>Contact</a></li>
-          </ul>          
-        </div>
+      <footer className="bg-warning pt-5 pb-2">
+        <div className="container text-center">
+          <div className='row '>
+            <div className='col d-flex flex-column mt-3'>
+              <h5 className='text-uppercase mb-4 fw-bold'> Quick Link </h5>
+              <ul className='list-inline text-start mx-auto'>
+                <li className=''><a href="#" className='text-decoration-none text-dark'>Home</a></li>
+                <li className=''><a href="#" className='text-decoration-none text-dark'>Recipes</a></li>
+                <li className=''><a href="#" className='text-decoration-none text-dark'>Populars</a></li>
+                <li className=''><a href="#" className='text-decoration-none text-dark'>About Us</a></li>
+                <li className=''><a href="#" className='text-decoration-none text-dark'>Contact</a></li>
+              </ul>          
+            </div>
 
         <div className='col-4 mx-auto mt-3'>
           <h5 className='text-uppercase mb-4 fw-bold'>Subscribe </h5>
@@ -41,16 +41,16 @@ const Footer = () => {
           </ul>
         </div>
 
-        <hr className="mb-4" />
+            <hr className="mb-4" />
 
-        <div className='row align-item-center'>
-          <div className="text-center">
-            <p>Copyright @2023 All rights reserved by:<a href="#" className='text-decoration-none fw-bold text-dark'>FoodieRapanzal</a></p>
-          </div>          
+            <div className='row align-item-center'>
+              <div className="text-center">
+                <p>Copyright @2023 All rights reserved by:<a href="#" className='text-decoration-none fw-bold text-dark'>FoodieRapanzal</a></p>
+              </div>          
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </footer>
+      </footer>
   </div>
  
   )
