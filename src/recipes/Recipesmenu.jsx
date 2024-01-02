@@ -1,13 +1,12 @@
 import React from 'react'
 import Recipesitem from './Recipesitem'
-import Exampleapi from '../exampleapi/Exampleapi'
-import { GetUser } from '../api/UserRequest'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query';
+import { GetUser } from '../api/UserRequest';
 
 const Recipesmenu = () => {
 
   const { data } = useQuery({ queryKey: ['getuser'], queryFn: GetUser });
-  console.log(data.user.name);
+  console.log(data);
 
   return (
     <>
@@ -21,8 +20,6 @@ const Recipesmenu = () => {
             <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
             <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
           </div>
-
-
 
         </div>
       </section>
