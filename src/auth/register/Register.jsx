@@ -1,5 +1,6 @@
 import React from 'react'
-import ButtonCo from '../../conents/ButtonCo'
+import Button from '../../components/buttons/Button'
+
 
 const Register = () => {
   return (
@@ -23,7 +24,7 @@ const Register = () => {
                 <input type="password" name='password' id='password' className="form-control p-2" placeholder='Comfirm Password' />
             </div>
 
-            <ButtonCo name="Register"/>
+            <Button name="Register"/>
 
             <p className='mt-4'>Already have an accout? <span className='text-danger'>Login Here...</span> </p>
         </div>   

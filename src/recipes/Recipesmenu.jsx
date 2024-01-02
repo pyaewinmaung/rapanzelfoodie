@@ -2,6 +2,8 @@ import React from 'react'
 import Recipesitem from './Recipesitem'
 import { useQuery } from '@tanstack/react-query';
 import { GetUser } from '../api/UserRequest';
+import Title from '../components/titles/Title';
+import Popular from '../popular/Popular';
 
 const Recipesmenu = () => {
 
@@ -13,6 +15,8 @@ const Recipesmenu = () => {
       <section className="py-5">
         <div className="container">
 
+          <Title titleone="Recipes" titletwo="Create your recipes"/>
+
           {/* for recipies form  */}
 
           <div className="row">
@@ -23,6 +27,8 @@ const Recipesmenu = () => {
 
         </div>
       </section>
+
+      <Popular/>
     </>
   )
 }

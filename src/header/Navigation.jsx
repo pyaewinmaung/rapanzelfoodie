@@ -9,7 +9,7 @@ const Navigation = () => {
 
 				{/* Start nav bar  */}
 				<div className="container">
-					<nav className="navbar navbar-expand-lg fixed-top">
+					<nav className="navbar navbar-expand-lg fixed-top shadow">
 
 						<a href="index.html" className="navbar-brand">
 							<span className="text-uppercase fw-bold h4 mx-2">Foodie  <span className="h5">Panzel</span></span>
@@ -30,7 +30,7 @@ const Navigation = () => {
 							</ul>
 
 							<div className="d-flex">
-								<form action="">
+								<form action="" class="me-md-3">
 									<input type="text" className="form-control-sm navsearchs" />
 								</form>
 

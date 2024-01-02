@@ -1,6 +1,8 @@
 import React from 'react'
 import recipe1 from '../assets/img/receipes/meal.jpg'
-import ButtonCo from '../conents/ButtonCo'
+import Button from '../components/buttons/Button'
+
+
 
 const Recipesitem = ({name,date,title,text}) => {
     return (
@@ -19,7 +21,7 @@ const Recipesitem = ({name,date,title,text}) => {
                         </div>
                         <h3>{title}</h3>
                         <p>{text}</p>
-                        <ButtonCo name="Buy" />
+                        <Button name="Buy"/>
                     </div>
                 </div>
             </div>

@@ -2,15 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@300;400;500&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'); 
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 :root{
 	/*hue saturation lightness alpha*/
 	--primary-color: hsl(330, 87%, 17%);
 	--secondary-color: #5ab799;
-    --white :#f4f4f4;
+  --nav-color: #fd9621; 
+  --background-color: #fde7d6;
+  --white :#f4f4f4;
+  --poppins :  'Poppins', sans-serif;
+  --caveat :  'Caveat', cursive;
+  --secular : 'Secular One', sans-serif;
 }
 
 body{
-	font-family: 'Poppins', sans-serif;
+  background: var(--background-color);
+	font-family: var(--poppins);
 	margin: 0;
 }
 
@@ -71,16 +79,18 @@ header{
 
 .navsearchs{
     border: none;
-    color: #888;
+    color: #939292;
     border-radius: 20px;
     background-image: url('../src/assets/img/icon/searchicon.png');
     background-repeat: no-repeat;
     background-position: 10px;
+    background-size: 15px;
     padding-left: 40px;
     padding-right: 20px;
 }
 
 .navsearchs:focus{
+    outline: none;
     box-shadow: none;
 }
 
@@ -91,14 +101,14 @@ header{
 }
 
 .menuitems{
-	/* color: #eee; */
+	color: #671101;
 	font-size: 14px;
 	letter-spacing: 1px;
 }
 
 .menuitems:hover{
-	color: var(--secondary-color);
-	
+	color: #ffffff;
+	text-shadow:0px 0px 3px #edb91b;
 }
 
 .navbuttons{
@@ -138,11 +148,11 @@ header{
 
 /* Start Banner  */
 .carousel-item{
-	height: 550px;
+	height: 80vh;
 }
 
 .carousels-indis{
-    list-style-type: none;
+    list-style-type: none; 
 }
 
 
@@ -196,12 +206,13 @@ header{
 
 .recentnames{
 	font-weight: 600;
-	background: #ffffff65;
+	background: #ffffffc0;
 	padding: 2px 5px;
 
 	position: absolute;
 	right: -50%;
 	bottom: 10px;
+  z-index: 2;
 
 	opacity: 0;
 
@@ -223,29 +234,25 @@ header{
 	transform: scale(1.15);
 }
 
-.dissoves::before{
+/* .dissoves::before{
 	content: "";
 	width: 100%;
 	height: 100%;
-	background: #30303057;
 	transition: all .3s linear;
-
+  background: none;
+  
 	position: absolute;
 	z-index: 2;
 }
 
 .dissoves:hover::before{
-	background: none;
-}
+  background: #ccbebe6d;
+} */
 
 
 /* End Recipes  */
 
-/*Start button  */
-/* .btncos{
-	
-} */
-/* End Button */
+
 
 /* Contact form  */
 /* Google Font CDN Link */
@@ -408,3 +415,25 @@ header{
 .policys{
   margin-top: 120px;
 }
+
+/* Start Footer  */
+.navbar{
+  background: var(--nav-color);
+}
+
+.footers{
+  background: var(--nav-color);
+}
+/* End Footer  */
+
+/* Coponents*/
+.titles span{
+  font-family: var(--caveat);
+  font-size: 30px;
+}
+
+.titles h2{
+  font-family: var(--secular);
+  font-size: 40px;
+}
+

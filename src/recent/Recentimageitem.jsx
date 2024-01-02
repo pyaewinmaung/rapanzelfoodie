@@ -1,13 +1,13 @@
 import React from 'react'
-import dessert from '../assets/img/receipes/dessert.jpg'
 
-const Recentimageitem = ({name}) => {
+
+const Recentimageitem = ({name,imagename}) => {
     return (
         <>
             <div className="col-6">
                 <div className="dissoves">
-                    <img src={dessert} alt="desert" />
-                    <p class="recentnames">By Phyu Phyu</p>
+                    <img src={imagename} alt="desert" />
+                    <p class="recentnames">By {name}</p>
                 </div>
                 
             </div>
