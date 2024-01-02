@@ -2,51 +2,75 @@ import React from 'react'
 
 const Terms = () => {
   return (
-    <div>
-        <p>
-        FoodieRapanzel - Terms of Service 
+    <>
+      <section className='py-5'>
 
-        Last Updated: [1.1.2024]
-        
-        1.  Acceptance of Terms 
-        By using FoodieRapanzel, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions, please do not use the website.
+        <div className='col-md-6 mx-auto policys'>
+          <ol className='list-group list-group-flush'>
+            <li className='list-group-item '> 
+              <p className='fw-bold'>1. Acceptance of Terms </p>
+              <p>- By using FoodieRapanzel, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions, please do not use the website.</p>
+            </li>
 
-        2.  User Accounts 
-        - Users may be required to create an account to access certain features.
-        - Users are responsible for maintaining the confidentiality of their account information.
+            <li className='list-group-item'>
+             <p className='fw-bold'> 2.  User Accounts </p>
+             <p>- Users may be required to create an account to access certain features.
+              - Users are responsible for maintaining the confidentiality of their account information.</p> 
+            </li>
 
-        3.  User Conduct 
-        - Users agree not to violate any laws or regulations while using the website.
-        - Users agree not to upload, post, or transmit any content that violates the rights of others or is harmful.
+            <li className='list-group-item'>
+              <p className='fw-bold'> 3.  User Conduct </p>
+              <p>- Users agree not to violate any laws or regulations while using the website.
+                - Users agree not to upload, post, or transmit any content that violates the rights of others or is harmful.</p> 
+           </li>
 
-        4.  Content Submission 
-        - Users may submit recipes, comments, and other content.
-        - FoodieRapanzel reserves the right to moderate and remove content that violates these Terms of Service.
+           <li className='list-group-item'>
+             <p className='fw-bold'>  4. Content Submission </p>
+             <p>- Users may submit recipes, comments, and other content.
+              - FoodieRapanzel reserves the right to moderate and remove content that violates these Terms of Service.</p>
+         </li>
 
-        5.  Intellectual Property 
-        - All content on the website, including text, images, and logos, is the property of FoodieRapanzel.
-        - Users may not use, reproduce, or distribute content without permission.
+         <li className='list-group-item'>
+            <p className='fw-bold'>  5. Intellectual Property </p>
+            <p>- All content on the website, including text, images, and logos, is the property of FoodieRapanzel.
+              - Users may not use, reproduce, or distribute content without permission.</p> 
+         </li>
 
-        6.  Privacy 
-        - FoodieRapanzel collects and uses user data as outlined in the Privacy Policy.
+         <li className='list-group-item'>
+          <p className='fw-bold'> 6. Privacy </p>
+          <p>- FoodieRapanzel collects and uses user data as outlined in the Privacy Policy.</p>   
+        </li>
 
-        7.  Limitation of Liability 
-        - FoodieRapanzel is not responsible for any damages or losses resulting from the use of the website.
+        <li className='list-group-item'>
+           <p className='fw-bold'>7. Limitation of Liability </p>
+           <p> - FoodieRapanzel is not responsible for any damages or losses resulting from the use of the website.</p>
+        </li>
 
-        8.  Termination 
-        - FoodieRapanzel reserves the right to terminate or suspend user accounts for violation of these Terms of Service.
+        <li className='list-group-item'>
+          <p className='fw-bold'> 8. Termination </p>
+          <p>- FoodieRapanzel reserves the right to terminate or suspend user accounts for violation of these Terms of Service.</p>
+        </li>
 
-        9.  Changes to Terms 
-        - FoodieRapanzel reserves the right to modify these Terms of Service at any time. Users are encouraged to review them periodically.
+        <li className='list-group-item'>
+          <p className='fw-bold'> 9. Changes to Terms </p>
+          <p>- FoodieRapanzel reserves the right to modify these Terms of Service at any time. Users are encouraged to review them periodically.</p>
+        </li>
 
-        10.  Governing Law 
-            - These Terms of Service are governed by the laws of [Your Jurisdiction].
+        <li className='list-group-item'>
+          <p className='fw-bold'>10. Governing Law </p>
+          <p>- These Terms of Service are governed by the laws of [Your Jurisdiction].</p>
+        </li>
 
-        11.  Contact Information 
-            - For questions or concerns about these Terms of Service, please contact foodierapanzel@gmail.com.
+        <li className='list-group-item'>
+          <p className='fw-bold'> 11.  Contact Information </p>
+          <p> - For questions or concerns about these Terms of Service, please contact foodierapanzel@gmail.com.</p> 
+        </li>
 
-        </p> 
-    </div>
+          </ol>
+        </div>
+
+      </section>
+    </>
   )
 }
 

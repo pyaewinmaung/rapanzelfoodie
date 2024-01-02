@@ -6,8 +6,8 @@ import { useQuery } from '@tanstack/react-query'
 
 const Recipesmenu = () => {
 
-  const { data } = useQuery({ queryKey: ['getuser'], queryFn: GetUser });
-  console.log(data.user.name);
+  // const { data } = useQuery({ queryKey: ['getuser'], queryFn: GetUser });
+  // console.log(data.user.name);
 
   return (
     <>
