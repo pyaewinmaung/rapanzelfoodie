@@ -2,6 +2,7 @@ import React from 'react'
 import Recipesitem from './Recipesitem'
 import { useQuery } from '@tanstack/react-query';
 import { GetUser } from '../api/UserRequest';
+import Popular from '../popular/Popular'
 
 const Recipesmenu = () => {
 
@@ -21,8 +22,10 @@ const Recipesmenu = () => {
             <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
           </div>
 
-        </div>
-      </section>
+            </div>
+        </section>
+
+        <Popular/>
     </>
   )
 }
