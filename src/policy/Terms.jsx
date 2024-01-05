@@ -5,7 +5,7 @@ const Terms = () => {
     <>
       <section className='py-5'>
 
-        <div className='col-md-6 mx-auto policys'>
+        <div className='col-md-8 mx-auto policys'>
           <ol className='list-group list-group-flush'>
             <li className='list-group-item '> 
               <p className='fw-bold'>1. Acceptance of Terms </p>
