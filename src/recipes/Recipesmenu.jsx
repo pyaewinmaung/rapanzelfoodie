@@ -4,12 +4,12 @@ import { useQuery } from '@tanstack/react-query';
 import { GetUser } from '../api/UserRequest';
 import Title from '../components/titles/Title';
 import Popular from '../popular/Popular';
+import { api } from '../api/api';
 
 const Recipesmenu = () => {
 
-  // const { data } = useQuery({ queryKey: ['getuser'], queryFn: GetUser });
-  // console.log(data.user.name);
-
+  const { data } = useQuery({ queryKey: ['getuser'], queryFn: () => api.userApi.get() });
+  console.log(data);
   return (
     <>
       <section className="py-5">
