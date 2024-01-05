@@ -34,11 +34,16 @@ const Navigation = () => {
 									<input type="text" className="form-control-sm navsearchs" />
 								</form>
 
+
 								<div>
+									<a href="#" className="btn btn-primary">Register</a>
+								</div>
+
+								{/* <div>
 									<a href="register" target="_blank">
 										<img src={userimage} alt="user1" className="userimgs" />
 									</a>
-								</div>
+								</div> */}
 							</div>
 
 

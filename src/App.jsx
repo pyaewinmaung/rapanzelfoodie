@@ -12,6 +12,7 @@ import Footer from "./footer/Footer";
 import Accessibility from "./policy/Accessibility";
 import Privacy from "./policy/Privacy";
 import Terms from "./policy/Terms";
+import Login from "./auth/login/Login";
 
 
 const App = () => {
@@ -25,7 +26,8 @@ const App = () => {
           <Navigation />
           <Routes>
             <Route path="/" elemtent={<Navigation />} />
-            <Route index element={<Bannerrecipe />} />
+            <Route index element={<Login/>} />
+            <Route path="banner" element={<Bannerrecipe />} />
             <Route path="home" element={<Bannerrecipe />} />
             <Route path="about" element={<About />} />
             <Route path="recipes" element={<Recipesmenu />} />
