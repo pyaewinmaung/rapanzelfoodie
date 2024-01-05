@@ -8,12 +8,13 @@
 	/*hue saturation lightness alpha*/
 	--primary-color: hsl(330, 87%, 17%);
 	--secondary-color: #5ab799;
-  --nav-color: #fd9621; 
-  --background-color: #fde7d6;
+  --nav-color: #f0ebe5; 
+  --background-color: #fde7d673;
   --white :#f4f4f4;
   --poppins :  'Poppins', sans-serif;
   --caveat :  'Caveat', cursive;
   --secular : 'Secular One', sans-serif;
+  --foot-color: #fd9621;
 }
 
 body{
@@ -400,6 +401,9 @@ header{
   margin-top: 120px;
   background-color: #000;
  }
+ img .vectors {
+  height: 500px;
+ }
 
  /* Start Register  */
 .registers{
@@ -422,7 +426,7 @@ header{
 }
 
 .footers{
-  background: var(--nav-color);
+  background: var(--foot-color);
 }
 /* End Footer  */
 

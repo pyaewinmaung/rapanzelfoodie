@@ -2,13 +2,11 @@ import React from 'react'
 
 const Login = () => {
 
-
-
   return (
     <>
-      <section id="login">
+      <section id="login" >
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-6">
             <div className='margintops p-5'>
               <form action="">
 
@@ -27,9 +25,9 @@ const Login = () => {
               </form>
             </div>
           </div>
-          <div className="col-md-8">
-
-          </div>
+          <div className='col-6'>
+            <img className='img-fluid' src="./recipelogin.png" alt="vector" />
+          </div>                   
         </div>
       </section>
     </>
