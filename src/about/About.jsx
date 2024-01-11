@@ -1,6 +1,20 @@
 import React from "react";
 
 const About = () => {
+
+  // fetch('http://127.0.0.1:8000/api/user').then(response=>response.json()).then(data=>console.log(data));
+
+
+  fetch('http://127.0.0.1:8000/api/user')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Fetch error:', error));
+
   return (
     // <div>
 

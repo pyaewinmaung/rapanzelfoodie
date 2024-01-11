@@ -3,6 +3,9 @@ import Navitem from './Navitem'
 import userimage from '../assets/img/users/user1.jpg'
 
 const Navigation = () => {
+
+	// const 
+
 	return (
 		<>
 			<header>
@@ -34,16 +37,17 @@ const Navigation = () => {
 									<input type="text" className="form-control-sm navsearchs" />
 								</form>
 
-
-								<div>
-									<a href="#" className="btn btn-primary">Register</a>
-								</div>
-
+								{
+								// 	token && <div>
+								// 	<a href="#" className="btn btn-primary">Register</a>
+								// </div> 
+								}
 								{/* <div>
-									<a href="register" target="_blank">
-										<img src={userimage} alt="user1" className="userimgs" />
-									</a>
+									<a href="#" className="btn btn-primary">Register</a>
 								</div> */}
+
+								{}
+
 							</div>
 
 
