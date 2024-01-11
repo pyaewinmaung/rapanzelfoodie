@@ -8,13 +8,13 @@
 	/*hue saturation lightness alpha*/
 	--primary-color: hsl(330, 87%, 17%);
 	--secondary-color: #5ab799;
-  --nav-color: #f0ebe5; 
-  --background-color: #fde7d673;
+  --nav-color: #fadae6; 
+  --background-color: #fcdbe7ad;
   --white :#f4f4f4;
   --poppins :  'Poppins', sans-serif;
   --caveat :  'Caveat', cursive;
   --secular : 'Secular One', sans-serif;
-  --foot-color: #fd9621;
+  --foot-color: #f9c6d9;
 }
 
 body{
@@ -108,8 +108,8 @@ header{
 }
 
 .menuitems:hover{
-	color: #ffffff;
-	text-shadow:0px 0px 3px #edb91b;
+	color: #f34d7f;
+	/* text-shadow:0px 0px 3px #ed1b1b; */
 }
 
 .navbuttons{

@@ -67,9 +67,9 @@ const Recipesmenu = () => {
               {post.length > 0 && (
                 post.map((item) =>
                   <div className="col-lg-4 col-md-6 mb-5" key={item.id}>
-                    <div className="card border-0 recipescards pb-3">
+                    <div className="card border-0 recipescards">
                       <img src="./../meal.jpg" alt="recipe1" className="recipeimgs" />
-                      <div className="p-2">
+                      <div className="p-4">
                         <div className="d-flex justify-content-between mb-2">
                           <div>
                             <span></span>
@@ -78,8 +78,8 @@ const Recipesmenu = () => {
                             <span></span>
                           </div>
                         </div>
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
+                        <h4>{item.title}</h4>
+                        <p className='h6'>{item.description?.substring(0, 50) + "....."}</p>
                         {/* <button onClick={()=>showClick(item)}/> */}
                         <Button name="Detail" clickname={item} />
                         

@@ -15,6 +15,7 @@ import Login from "./auth/login/Login";
 import CreateRecipes from "./recipes/CreateRecipes";
 import ShowRecipes from "./recipes/ShowRecipes";
 import Register from "./auth/register/Register";
+import EditRecipes from "./recipes/EditRecipes";
 
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="about" element={<About />} />
             <Route path="recipes" element={<Recipesmenu />} />
             <Route path="/create" element={<CreateRecipes />} />
+            <Route path="/edit" element={<EditRecipes/> } />
             <Route path="/show" element={<ShowRecipes />} />
             <Route path="contact" element={<Contact />} />
             <Route path="register" element={<Register />} />

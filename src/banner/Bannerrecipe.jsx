@@ -3,6 +3,7 @@ import Recipesmenu from '../recipes/Recipesmenu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Category from '../categories/Category'
+import Popular from '../popular/Popular'
 
 const Bannerrecipe = () => {
     return (
@@ -73,6 +74,8 @@ const Bannerrecipe = () => {
             <Category/>
 
             <Recipesmenu />
+
+            <Popular/>
 
         </>
     )
