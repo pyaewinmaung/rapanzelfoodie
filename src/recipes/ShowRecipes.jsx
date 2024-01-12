@@ -1,4 +1,4 @@
-import { faArrowLeft, faBellConcierge, faCircleUser, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faBellConcierge, faCircleUser, faCrown, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -59,10 +59,10 @@ const ShowRecipes = () => {
                                     <p className='d-flex align-items-center'><FontAwesomeIcon icon={faBellConcierge} size='2x' className='me-3' /> Category : {item.category_name}</p>
                                     <p>Update Time : </p>
                                     <div className='mb-3'>
-                                        <span className='text-white bg-warning rounded p-1 px-2'>Premium</span>
+                                        <span className='text-white bg-warning rounded p-1 px-2'>Premium <FontAwesomeIcon icon={faCrown} style={{color: "#ffffff",}} /></span>
                                     </div>
                                     
-                                    <button className='btn btn-outline-danger btn-sm'>Favorite Collection <FontAwesomeIcon icon={faHeart} /></button>
+                                    <button className='btn btn-outline-danger btn-sm'>Favorite <i class="fa-regular fa-heart"></i></button>
                                 </div>
                             </div>
                             <div className='col-md-6'>

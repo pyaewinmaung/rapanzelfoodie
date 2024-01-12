@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navigation from "./header/Navigation";
 import Bannerrecipe from "./banner/Bannerrecipe";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import About from "./about/About";
 import Contact from "./contact/Contact";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -19,39 +19,46 @@ import EditRecipes from "./recipes/EditRecipes";
 
 
 const App = () => {
-  const queryClient = new QueryClient();
+
+  const token = localStorage.getItem('token');
+
 
   return (
     <>
 
 
 
-      <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+      <Navigation />
+      <Routes>
+        {/* <Route path="/" elemtent={<Navigation />} /> */}
+        {!token && (
+          <>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </>
+        )}
 
-          <Navigation />
-          <Routes>
-            <Route path="/" elemtent={<Navigation />} />
-            <Route path="login" element={<Login/>} />
-            <Route path="register" element={<Register/>} />
-            <Route path="banner" element={<Bannerrecipe />} />
-            <Route path="home" element={<Bannerrecipe />} />
-            <Route path="about" element={<About />} />
-            <Route path="recipes" element={<Recipesmenu />} />
+        {token && (
+          <>
+            <Route index element={<Bannerrecipe />} />
+            <Route path="/home" element={<Bannerrecipe />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/recipes" element={<Recipesmenu />} />
             <Route path="/create" element={<CreateRecipes />} />
-            <Route path="/edit" element={<EditRecipes/> } />
+            <Route path="/edit" element={<EditRecipes />} />
             <Route path="/show" element={<ShowRecipes />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="register" element={<Register />} />
-            <Route path="accessibility" element={<Accessibility/>} />
-            <Route path="privacy" element={<Privacy/>} />
-            <Route path="terms" element={<Terms/>} />
-          </Routes>
-          <Footer/>
-          {/* <Login/> */}
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+          </>
+        )}
 
-        </BrowserRouter>
-      </QueryClientProvider>
+      </Routes>
+      <Footer />
+      {/* <Login/> */}
+
     </>
   );
 };

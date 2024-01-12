@@ -1,10 +1,23 @@
 import React from 'react'
 import Navitem from './Navitem'
 import userimage from '../assets/img/users/user1.jpg'
+import { logout } from '../api/authservice';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
 
-	// const 
+	const token = localStorage.getItem("token");
+
+	const navigate = useNavigate();
+
+	const logoutHandler = async()=>{
+		
+		localStorage.removeItem('token');
+
+		navigate('/login');
+		window.location.reload();
+
+	}
 
 	return (
 		<>
@@ -24,12 +37,12 @@ const Navigation = () => {
 							<div className="bg-light lines3"></div>
 						</button>
 
-						<div id="nav" className="navbar-collapse collapse justify-content-end text-uppercase gap-3 spa fw-bold">
+						<div id="nav" className="navbar-collapse collapse justify-content-end text-uppercase gap-3 spa fw-bold pe-5">
 							<ul className="navbar-nav">
 								<Navitem navname="Home" navlink="home" />
-								<Navitem navname="Recipes"  navlink="recipes" />
-								<Navitem navname="About Us"  navlink="about" />
-								<Navitem navname="Contact"  navlink="contact" />
+								<Navitem navname="Recipes" navlink="recipes" />
+								<Navitem navname="About Us" navlink="about" />
+								<Navitem navname="Contact" navlink="contact" />
 							</ul>
 
 							<div className="d-flex">
@@ -38,15 +51,29 @@ const Navigation = () => {
 								</form>
 
 								{
-								// 	token && <div>
-								// 	<a href="#" className="btn btn-primary">Register</a>
-								// </div> 
+									token &&
+									<>
+										<div className="dropdown">
+											<button className="btn btn-secondary p-0 rounded-circle" type="button" data-bs-toggle="dropdown">
+												<div className='profiles'>
+													<img src="/image/istockphoto-1495088043-612x612 (1).jpg" alt="user" />
+												</div>
+											</button>
+											<ul class="dropdown-menu dropbtns">
+												<li><a className="dropdown-item text-capitalize" href="#">Profile</a></li>
+												<li><hr class="dropdown-divider" /></li>
+												<li><a className="dropdown-item text-capitalize" href="#" onClick={logoutHandler}>Logout</a></li>
+											</ul>
+										</div>
+
+									</>
+
 								}
 								{/* <div>
 									<a href="#" className="btn btn-primary">Register</a>
 								</div> */}
 
-								{}
+								{ }
 
 							</div>
 

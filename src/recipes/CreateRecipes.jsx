@@ -7,13 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const CreateRecipes = () => {
+    const [image, setImage] = useState("");
+    
+    const [inputData, setInputData] = useState({ image:image || '',title: '', description: '', category_id: '1', amount: '', type: 'free' });
 
-    const [inputData, setInputData] = useState({ title: '', description: '', category_id: '1', amount: '', type: 'free' });
-
-    // const [image, setImage] = useState("");
+    
 
     // const handleImageChange = (event) => {
     //     const selectedImage = event.target.files[0];
+
+    //     console.log(selectedImage);
     //     setImage(selectedImage);
     //   };
 
@@ -34,6 +37,10 @@ const CreateRecipes = () => {
 
     const onHandleSubmit = async (e) => {
         e.preventDefault();
+
+        const formData = new FormData();
+        formData.append("image",image)
+        
         try {
 
             const response = await createrecipes(inputData);
@@ -83,10 +90,17 @@ const CreateRecipes = () => {
                                 </div>
                                 <form onSubmit={onHandleSubmit} action="" encType="multipart/form-data" >
 
-                                    {/* <div className='form-group mb-3'>
-                                <label htmlFor="image">Image</label>
-                                <input type="file" name="image" id="image" className='form-control' onChange={handleImageChange} />
-                            </div> */}
+                                    <div className='form-group mb-3'>
+                                        <label htmlFor="image">Image</label>
+                                        <input type="file" name="image" id="image" className='form-control' onChange={e =>{
+                                             const selectedImage = e.target.files[0];
+                                            //  setImage(URL.createObjectURL(selectedImage))
+                                            setImage(selectedImage)
+                                            //  setInputData({ ...inputData, image: selectedImage})
+                                        }
+                                           
+                                        } />
+                                    </div>
 
                                     <div className="form-group mb-3">
                                         <label htmlFor="title">Title</label>
