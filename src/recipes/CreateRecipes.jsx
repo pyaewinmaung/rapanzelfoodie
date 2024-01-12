@@ -8,10 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CreateRecipes = () => {
     const [image, setImage] = useState("");
-    
-    const [inputData, setInputData] = useState({ image:image || '',title: '', description: '', category_id: '1', amount: '', type: 'free' });
+    const [inputData, setInputData] = useState({ image:'' || '',title: '', description: '', category_id: '1', amount: '', type: 'free' });
 
     
+    console.log(inputData);
 
     // const handleImageChange = (event) => {
     //     const selectedImage = event.target.files[0];
@@ -40,10 +40,15 @@ const CreateRecipes = () => {
 
         const formData = new FormData();
         formData.append("image",image)
+        formData.append("title",inputData.title)
+        formData.append("description",inputData.description)
+        formData.append("category_id",inputData.category_id)
+        formData.append("amount",inputData.amount)
+        formData.append("type",inputData.type)
         
         try {
 
-            const response = await createrecipes(inputData);
+            const response = await createrecipes(formData);
 
             if (response.status === 200) {
                 // alert("success");
