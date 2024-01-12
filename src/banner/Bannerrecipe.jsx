@@ -4,8 +4,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Category from '../categories/Category'
 import Popular from '../popular/Popular'
+import { useNavigate } from 'react-router-dom'
+
+
 
 const Bannerrecipe = () => {
+
+    const token = localStorage.getItem("token");
+
+    const navigate = useNavigate();
+
+    if(!token){
+        navigate("/login");
+    }
+
     return (
         <>
             <div id="mycarousel" className="carousel slide carousel-fade my-5" data-bs-ride="carousel"  >

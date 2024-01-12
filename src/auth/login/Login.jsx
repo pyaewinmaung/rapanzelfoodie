@@ -22,6 +22,7 @@ const Login = () => {
 
           // <Bannerrecipe/>
           navigate("/home");
+          window.location.reload();
       }
   }
 

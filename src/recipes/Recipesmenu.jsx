@@ -12,6 +12,7 @@ import ShowRecipes from './ShowRecipes';
 import axios from 'axios';
 import { getrecipes } from '../api/getrecipes';
 import Button from '../components/buttons/Button';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Recipesmenu = () => {
 
@@ -49,6 +50,10 @@ const Recipesmenu = () => {
 
   return (
     <>
+
+      <div className='createresipes'>
+        <button type="button" className='creatresipesbtn shadow' onClick={buttonClick} >Create <i class="fa-solid fa-plus"></i></button>
+      </div>
       <section className="margintops">
         <div className="container">
 
@@ -57,9 +62,7 @@ const Recipesmenu = () => {
 
             {/* for recipies form  */}
 
-            <div>
-              <button type="button" className='btn btn-primary btn-sm' onClick={buttonClick} >Create Recipes</button>
-            </div>
+
 
             <div className="row">
               {/* <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" /> */}
@@ -69,7 +72,7 @@ const Recipesmenu = () => {
                   <div className="col-lg-4 col-md-6 mb-5" key={item.id}>
                     <div className="card border-0 recipescards">
                       <img src="./../meal.jpg" alt="recipe1" className="recipeimgs" />
-                      <div className="p-4">
+                      <div className="card-body p-4">
                         <div className="d-flex justify-content-between mb-2">
                           <div>
                             <span></span>
@@ -81,8 +84,10 @@ const Recipesmenu = () => {
                         <h4>{item.title}</h4>
                         <p className='h6'>{item.description?.substring(0, 50) + "....."}</p>
                         {/* <button onClick={()=>showClick(item)}/> */}
-                        <Button name="Detail" clickname={item} />
-                        
+                        <div className='card-footer bg-white'>
+                          <Button name="Detail" clickname={item} />
+                        </div>
+
                       </div>
                     </div>
                   </div>

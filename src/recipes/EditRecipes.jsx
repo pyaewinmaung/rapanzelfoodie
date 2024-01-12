@@ -22,7 +22,7 @@ const EditRecipes = () => {
 
     // console.log(item);
 
-    const [inputData, setInputData] = useState({ title: item.title, description: item.description, category_id: item.category_id, amount: item.amount, type: item.type });
+    const [inputData, setInputData] = useState({image:"" ,title: item.title, description: item.description, category_id: item.category_id, amount: item.amount, type: item.type });
 
     const navigate = useNavigate();
 
@@ -40,12 +40,12 @@ const EditRecipes = () => {
         e.preventDefault();
         try {
 
-            const recipeIdToUpdate  = item.id;
+            const recipeIdToUpdate = item.id;
 
-            const response = await updaterecipe(recipeIdToUpdate,inputData);
+            const response = await updaterecipe(recipeIdToUpdate, inputData);
 
             if (response.status === 200) {
-                // alert("success");
+                alert("success");
                 // console.log(response);
 
                 navigate("/recipes");
@@ -69,6 +69,11 @@ const EditRecipes = () => {
         navigate(-1);
     }
 
+    const handleImageChange = (event) => {
+        const selectedImage = event.target.files[0];
+        setImage(selectedImage);
+      };
+
     return (
         <>
             <section className="margintops">
@@ -87,10 +92,10 @@ const EditRecipes = () => {
                                 </div>
                                 <form onSubmit={onHandleSubmit} action="" encType="multipart/form-data" >
 
-                                    {/* <div className='form-group mb-3'>
-                                <label htmlFor="image">Image</label>
-                                <input type="file" name="image" id="image" className='form-control' onChange={handleImageChange} />
-                            </div> */}
+                                    <div className='form-group mb-3'>
+                                        <label htmlFor="image">Image</label>
+                                        <input type="file" name="image" id="image" className='form-control' onChange={handleImageChange} />
+                                    </div>
 
                                     <div className="form-group mb-3">
                                         <label htmlFor="title">Title</label>
