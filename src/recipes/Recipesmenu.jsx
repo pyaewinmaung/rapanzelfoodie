@@ -71,7 +71,7 @@ const Recipesmenu = () => {
                 post.map((item) =>
                   <div className="col-lg-4 col-md-6 mb-5" key={item.id}>
                     <div className="card border-0 recipescards">
-                      <img src="./../meal.jpg" alt="recipe1" className="recipeimgs" />
+                      <img src={item.image} alt="recipe1" className="recipeimgs" />
                       <div className="card-body p-4">
                         <div className="d-flex justify-content-between mb-2">
                           <div>

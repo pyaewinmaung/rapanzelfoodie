@@ -67,7 +67,7 @@ const ShowRecipes = () => {
                             </div>
                             <div className='col-md-6'>
                                 <div>
-                                    <img src="./../meal.jpg" alt="meal" className='w-100 rounded' />
+                                    <img src={item.image} alt="meal" className='w-100 rounded' />
                                 </div>
                             </div>
                         </div>
