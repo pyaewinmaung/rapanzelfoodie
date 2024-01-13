@@ -15,7 +15,8 @@ const ShowRecipes = () => {
     const navigate = useNavigate();
 
     const backHandler = () => {
-        navigate(-1);
+        navigate("/recipes");
+        // navigate(-1);
         // window.location.reload();
     }
 
