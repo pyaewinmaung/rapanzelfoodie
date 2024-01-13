@@ -5,6 +5,8 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Category from '../categories/Category'
 import Popular from '../popular/Popular'
 import { useNavigate } from 'react-router-dom'
+import Aboutrecipes from '../about/Aboutrecipes'
+import Subscribe from '../subscribe/Subscribe'
 
 
 
@@ -85,9 +87,13 @@ const Bannerrecipe = () => {
 
             <Category/>
 
+            <Aboutrecipes/>
+
             <Recipesmenu />
 
             <Popular/>
+
+            <Subscribe/>
 
         </>
     )

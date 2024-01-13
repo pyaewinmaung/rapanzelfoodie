@@ -183,14 +183,22 @@ header{
 
 /* Start Recipes  */
 .recipescards{
-  max-height: 430px;
+  height: 390px;
 	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 	border-radius: 20px;
-	overflow: hidden;
+	
 }
 
 .recipeimgs{
-	max-height: 320px;
+	height: 200px;
+  border-radius: 20px 20px 0 0 ;
+  overflow: hidden;
+}
+
+.recipeimgs img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .popularimgs{
@@ -486,7 +494,7 @@ header{
   width: 240px;
   height: 370px;
   transition: 0.5s;
-  background-color: rgba(67, 67, 151, 0.2);
+  /* background-color: rgba(67, 67, 151, 0.2); */
 }
 
 #slider-span1:target ~ .image-slider #img1,
@@ -579,10 +587,17 @@ header{
 .profiles{
   width: 30px;
   height: 30px;
+  display: flex;
 }
 
 .profiles img{
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+/* subscribe  */
+.subscribes{
+  background-image: url('../public/vegetables-3193197_1280.jpg');
+  background-repeat: no-repeat;
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navigation from "./header/Navigation";
 import Bannerrecipe from "./banner/Bannerrecipe";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import About from "./about/About";
 import Contact from "./contact/Contact";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -22,6 +22,14 @@ const App = () => {
 
   const token = localStorage.getItem('token');
 
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   // Redirect to login if there's no token
+  //   if (!token) {
+  //     navigate('/login');
+  //   }
+  // }, [token, navigate]);
 
   return (
     <>
@@ -35,6 +43,7 @@ const App = () => {
           <>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="*" element={<Navigate to="/login" />} />
           </>
         )}
 
