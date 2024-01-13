@@ -46,7 +46,6 @@ const Login = () => {
                   <input type="password" className='form-control mb-2' placeholder='Password' value={inputData.password} onChange={e=>
                     setInputData({...inputData,password:e.target.value})
                   } />
-                  <a href='#' className='text-danger mb-5 text-decoration-none fs-6'>Forget password?</a>
                 </div>
 
                 <div className='d-grid mb-4'>
@@ -57,8 +56,10 @@ const Login = () => {
               </form>
             </div>
           </div>
-          <div className='col-6'>
-            <img className='img-fluid' src="./recipelogin.png" alt="vector" />
+          <div className='col-md-6 d-none d-md-block'>
+            <div className='d-flex justify-content-center'>
+              <img className='img-fluid' src="./recipelogin.png" alt="vector" />
+            </div>
           </div>
         </div>
       </section>

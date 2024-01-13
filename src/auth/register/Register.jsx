@@ -6,19 +6,30 @@ import { register } from '../../api/authservice';
 
 const Register = () => {
 
-    const [inputData, setInputData] = useState("");
+    const [image, setImage] = useState("");
+    const [inputData, setInputData] = useState({image :'', name: '', email: '',password : '', confirmation_password: '', address: '', phone: '' });
 
     const navigate = useNavigate();
 
-    const onHandleSubmit = async(e)=>{
+    const onHandleSubmit = async (e) => {
         e.preventDefault();
+        console.log(image);
+        const formData = new FormData();
+        formData.append("image", image)
+        formData.append("name", inputData.name)
+        formData.append("email", inputData.email)
+        formData.append("password", inputData.password)
+        formData.append("confirmation_password", inputData.confirmation_password)
+        formData.append("address", inputData.address)
+        formData.append("phone", inputData.phone)
+        
 
-        const response = await register(inputData);
+        const response = await register(formData);
 
-        if(response.status === 200){
-            // console.log("this is response",response);
-  
-            // <Bannerrecipe/>
+        if (response.status === 200) {
+
+            alert("Account Create Successfully");
+
             navigate("/login");
         }
 
@@ -33,7 +44,19 @@ const Register = () => {
                         <div className='w-75 px-5'>
                             <h3 className='text-center'>Create Account</h3>
 
-                            <form action="" onSubmit={onHandleSubmit}>
+                            <form action="" onSubmit={onHandleSubmit} encType="multipart/form-data">
+
+                                <div className='form-group mb-3'>
+                                    <input type="file" name="image" className='form-control' onChange={e => {
+                                        const selectedImage = e.target.files[0];
+                                        //  setImage(URL.createObjectURL(selectedImage))
+                                        setImage(selectedImage)
+                                        //  setInputData({ ...inputData, image: selectedImage})
+                                    }
+
+                                    } />
+                                </div>
+
                                 <div className='form-group mb-3'>
                                     <input type="text" name='name' id='name' className="form-control p-2" placeholder='Name' value={inputData.name} onChange={e =>
                                         setInputData({ ...inputData, name: e.target.value })
@@ -47,7 +70,7 @@ const Register = () => {
                                 </div>
 
                                 <div className='form-group mb-3'>
-                                    <input type="text" name='password' id='password' className="form-control p-2" placeholder='Password' value={inputData.password} onChange={e =>
+                                    <input type="password" name='password' id='password' className="form-control p-2" placeholder='Password' value={inputData.password} onChange={e =>
                                         setInputData({ ...inputData, password: e.target.value })
                                     } />
                                 </div>
@@ -91,4 +114,3 @@ const Register = () => {
 
 export default Register
 
-   

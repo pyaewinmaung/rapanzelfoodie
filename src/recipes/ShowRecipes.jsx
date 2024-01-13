@@ -1,10 +1,13 @@
 import { faArrowLeft, faBellConcierge, faCircleUser, faCrown, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { deleterecipe } from '../api/getrecipes'
+import { getuser } from '../api/getuser'
 
 const ShowRecipes = () => {
+    const [user,setUser] = useState("");
+
     const location = useLocation()
     const item = location.state
     // console.log(item);
@@ -12,11 +15,12 @@ const ShowRecipes = () => {
     const navigate = useNavigate();
 
     const backHandler = () => {
-        navigate("/recipes");
+        navigate(-1);
+        // window.location.reload();
     }
 
-    const editHandler = (item)=>{
-        navigate("/edit",{state: item});
+    const editHandler = (item) => {
+        navigate("/edit", { state: item });
     }
 
     const deleteHandler = async () => {
@@ -36,6 +40,17 @@ const ShowRecipes = () => {
         }
 
     }
+
+    useEffect(() => {
+		getuser().then((response) => {
+		  if (response.status === 200) {
+			setUser(response.data.data)
+		  }
+		}).catch(e => console.log(e))
+	
+	  }, []);
+
+
 
     return (
         <>
@@ -57,12 +72,20 @@ const ShowRecipes = () => {
                                         </div>
                                     </div>
                                     <p className='d-flex align-items-center'><FontAwesomeIcon icon={faBellConcierge} size='2x' className='me-3' /> Category : {item.category_name}</p>
-                                    <p>Update Time : </p>
-                                    <div className='mb-3'>
-                                        <span className='text-white bg-warning rounded p-1 px-2'>Premium <FontAwesomeIcon icon={faCrown} style={{color: "#ffffff",}} /></span>
-                                    </div>
-                                    
-                                    <button className='btn btn-outline-danger btn-sm'>Favorite <i class="fa-regular fa-heart"></i></button>
+                                    <p>Update Time :  </p>
+
+                                    {
+                                        item.type === "premium" ?
+                                            <div className='mb-3'>
+                                                <span className='text-white bg-warning rounded p-1 px-2'>Premium <FontAwesomeIcon icon={faCrown} style={{ color: "#ffffff", }} /></span>
+                                            </div>
+                                            :
+                                            <div className='mb-3'>
+                                                <span className='text-white bg-primary rounded p-1 px-2'>Free</span>
+                                            </div>
+                                    }
+
+                                    <button className='btn btn-outline-danger btn-sm mb-3'>Favorite <i class="fa-regular fa-heart"></i></button>
                                 </div>
                             </div>
                             <div className='col-md-6'>
@@ -76,13 +99,28 @@ const ShowRecipes = () => {
 
                         <div>
                             <p className='h5 fw-bold'>{item.description}</p>
+                            
+                            <p>
+                                {item.instruction}
+                            </p>
 
-                            <div className='d-flex justify-content-end gap-2'>
-                                <button className='btn btn-primary' onClick={()=>editHandler(item)}>Edit</button>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    Delete
-                                </button>
-                            </div>
+
+                            {
+                                item.user_id === user.id ?
+
+                                <div className='d-flex justify-content-end gap-2'>
+                                    <button className='btn btn-primary' onClick={() => editHandler(item)}>Edit</button>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        Delete
+                                    </button>
+                                </div>
+                                : 
+
+                                <div className='d-flex justify-content-end'>
+                                    <button className='btn btn-success'>Buy</button>
+                                </div>
+                            }
+
                         </div>
                     </div>
 
