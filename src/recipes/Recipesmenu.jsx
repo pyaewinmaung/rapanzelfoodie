@@ -10,7 +10,7 @@ import EditRecipes from './EditRecipes';
 import { useNavigate } from 'react-router-dom';
 import ShowRecipes from './ShowRecipes';
 import axios from 'axios';
-import { getrecipes } from '../api/getrecipes';
+import { getrecipes, searchrecipe } from '../api/getrecipes';
 import Button from '../components/buttons/Button';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,6 +20,7 @@ const Recipesmenu = () => {
   // console.log(data);
 
   const [post, setPost] = useState([]);
+  const [find, setFind] = useState("");
 
   // const token = localStorage.getItem('token');
 
@@ -33,9 +34,27 @@ const Recipesmenu = () => {
 
   }
 
+  const handleChange = (e) => {
+    const searchText = e.target.value;
+
+    setFind(searchText);
+
+    handleSearch(searchText)
+
+  }
+
+  const handleSearch = (searchText)=>{
+    searchrecipe(searchText).then((response)=>{
+      if(response.status === 200){
+        setPost(response.data.data)
+      }
+    })
+  }
+
   useEffect(() => {
     getrecipes().then((response) => {
       if (response.status === 200) {
+
         setPost(response.data.data)
       }
     }).catch(e => console.log(e))
@@ -47,6 +66,8 @@ const Recipesmenu = () => {
 
   // console.log(post.data[0].title);
   // console.log(post.data[0].category.category);
+
+  console.log();
 
   return (
     <>
@@ -60,9 +81,11 @@ const Recipesmenu = () => {
           <div className='col-md-10 mx-auto'>
             <Title titleone="Recipes" titletwo="Create your recipes" />
 
+
+            <input type="text" name="title" className="form-control-sm navsearchs" value={find} onChange={handleChange} />
+
+
             {/* for recipies form  */}
-
-
 
             <div className="row">
               {/* <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" /> */}

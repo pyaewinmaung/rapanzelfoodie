@@ -11,7 +11,7 @@ const CreateRecipes = () => {
     const [inputData, setInputData] = useState({ image: '' || '', title: '', description: '',instruction : '', category_id: '1', amount: '', type: 'free' });
 
 
-    console.log(inputData);
+    
 
     // const handleImageChange = (event) => {
     //     const selectedImage = event.target.files[0];
@@ -30,6 +30,7 @@ const CreateRecipes = () => {
             if (response.status === 200) {
                 // console.log(response);
                 setCategory(response.data.data)
+                // console.log(category);
             }
         }).catch(e => console.log(e))
 
@@ -45,6 +46,7 @@ const CreateRecipes = () => {
         formData.append("category_id", inputData.category_id)
         formData.append("amount", inputData.amount)
         formData.append("type", inputData.type)
+        
 
         try {
 
@@ -94,6 +96,7 @@ const CreateRecipes = () => {
                                     const selectedImage = e.target.files[0];
                                     //  setImage(URL.createObjectURL(selectedImage))
                                     setImage(selectedImage)
+
                                     //  setInputData({ ...inputData, image: selectedImage})
                                 }
 
@@ -130,11 +133,11 @@ const CreateRecipes = () => {
                                     <option selected disabled>Choose Category</option>
                                     {category.length > 0 && (
                                         category.map((item, idx) =>
-                                            <option key={idx} value={item.category_id}>{item.category_name}</option>
+                                            <option key={idx} value={item.id}>{item.category}</option>
                                         )
                                     )}
                                 </select>
-                                {error && error.category_id && <span className='text-danger'>{error.category_id}</span>}
+                                {error && error.category && <span className='text-danger'>{error.category}</span>}
                             </div>
 
                             <div className="form-group mb-3">
