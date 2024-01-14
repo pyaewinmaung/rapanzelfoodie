@@ -8,13 +8,13 @@
   /*hue saturation lightness alpha*/
   --primary-color: hsl(330, 87%, 17%);
   --secondary-color: #5ab7a3;
-  --nav-color: #7ff1cd;
-  --background-color: #ffc9baeb;
+  --nav-color: #9ed4be;
+  --background-color: #b9a8b965;
   --white: #f4f4f4;
   --poppins: 'Poppins', sans-serif;
   --caveat: 'Caveat', cursive;
   --secular: 'Secular One', sans-serif;
-  --foot-color: #f9c6d9;
+  --foot-color: #f8960dcf;
 }
 
 body {
