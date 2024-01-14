@@ -90,7 +90,7 @@ const ShowRecipes = () => {
                       size="2x"
                       className="me-3"
                     />{" "}
-                    Category : {item.category_name}
+                    Category : {item.category}
                   </p>
                   <p>Update Time : </p>
 
@@ -113,7 +113,7 @@ const ShowRecipes = () => {
                   )}
 
                   <button className="btn btn-outline-danger btn-sm mb-3">
-                    Favorite <i class="fa-regular fa-heart"></i>
+                    Favorite <i className="fa-regular fa-heart"></i>
                   </button>
                 </div>
               </div>
@@ -188,7 +188,7 @@ const ShowRecipes = () => {
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
-        tabindex="-1"
+        // tabindex="-1"
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
