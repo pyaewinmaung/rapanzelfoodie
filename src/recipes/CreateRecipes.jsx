@@ -129,7 +129,7 @@ const CreateRecipes = () => {
 
                             <div className="form-group mb-3">
                                 <label htmlFor="category">Category</label>
-                                <select name="category" id="category" className='form-select' defaultValue={inputData.category_id} onChange={e => setInputData({ ...inputData, category_id: e.target.value })} >
+                                <select name="category" id="category" className='form-select' defaultValue={inputData.id} onChange={e => setInputData({ ...inputData, id: e.target.value })} >
                                     <option selected disabled>Choose Category</option>
                                     {category.length > 0 && (
                                         category.map((item, idx) =>
