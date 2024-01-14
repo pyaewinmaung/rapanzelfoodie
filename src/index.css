@@ -616,3 +616,22 @@ header{
   background-image: url('/vegetables-3193197_1280.jpg');
   background-repeat: no-repeat;
 }
+
+.icon-boxs{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.icon-boxs i{
+  font-size: 30px;
+  color: #555454;
+}
+
+.comment-card{
+  background: #e3dcdc;
+  padding: 20px 40px;
+  border-radius: 0px 20px 20px 20px ;
+}
