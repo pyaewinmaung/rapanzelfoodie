@@ -76,7 +76,7 @@ const Category = () => {
                     <div className='col-md-2'>
                         <div className="category-card shadow" onClick={categoryHandler}>
                             <div className='category-box'>
-                                <img src="sweets.png" alt="category1" />
+                                <img src="/sweets.png" alt="category1" />
                                 <div className="overlay">
                                     <h5 className='text-dark fw-bold'>Dessert</h5>
                                 </div>
@@ -87,7 +87,7 @@ const Category = () => {
                     <div className='col-md-2'>
                         <div className="category-card shadow" onClick={categoryHandler}>
                             <div className='category-box'>
-                                <img src="dinner.png" alt="category1" />
+                                <img src="/dinner.png" alt="category1" />
                                 <div className="overlay">
                                     <h5 className='text-dark fw-bold'>Meal</h5>
                                 </div>
@@ -98,7 +98,7 @@ const Category = () => {
                     <div className='col-md-2'>
                         <div className="category-card shadow" onClick={categoryHandler}>
                             <div className='category-box'>
-                                <img src="soup.png" alt="category1" />
+                                <img src="/soup.png" alt="category1" />
                                 <div className="overlay">
                                     <h5 className='text-dark fw-bold'>Soup</h5>
                                 </div>
@@ -109,7 +109,7 @@ const Category = () => {
                     <div className='col-md-2'>
                         <div className="category-card shadow" onClick={categoryHandler}>
                             <div className='category-box'>
-                                <img src="vegetable.png" alt="category1" />
+                                <img src="/vegetable.png" alt="category1" />
                                 <div className="overlay">
                                     <h5 className='text-dark fw-bold'>Vegetable</h5>
                                 </div>
@@ -120,7 +120,7 @@ const Category = () => {
                     <div className='col-md-2'>
                         <div className="category-card shadow" onClick={categoryHandler}>
                             <div className='category-box'>
-                                <img src="salad.png" alt="category1" />
+                                <img src="/salad.png" alt="category1" />
                                 <div className="overlay">
                                     <h5 className='text-dark fw-bold'>Salad</h5>
                                 </div>
