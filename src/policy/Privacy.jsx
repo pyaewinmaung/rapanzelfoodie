@@ -6,6 +6,7 @@ const Privacy = () => {
     <section className='py-5'>
 
 <div className='col-md-8 mx-auto policys'>
+<h2 className='text-center fw-bold'>Privacy Policy</h2>
   <ol className='list-group list-group-flush'>
     <li className='list-group-item'> 
       <p className='fw-bold'>1.Information We Collect </p>

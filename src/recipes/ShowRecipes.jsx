@@ -10,17 +10,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { deleterecipe } from "../api/getrecipes";
-import { getuser } from "../api/getuser";
+import { createbuyuser, getuser } from "../api/getuser";
 import { getcomment, postcomment } from "../api/comments";
 
 const ShowRecipes = () => {
     const location = useLocation();
     const item = location.state;
-    // console.log(item);
+    console.log(item);
     const [user, setUser] = useState("");
     const [comment, setComment] = useState([]);
     const [inputData, setInputData] = useState({ recipe_id: item.recipe_id, comment: '' })
-
+    // const [buyuser,setBuyuser] = useState({user_id : user.id,recipe_id : item.recipe_id });
+    const buyuser = {user_id : user.id,recipe_id : item.recipe_id};
 
     // console.log(item.id);
 
@@ -55,7 +56,10 @@ const ShowRecipes = () => {
         getuser()
             .then((response) => {
                 if (response.status === 200) {
+
+                    // console.log(response);
                     setUser(response.data.data);
+                    // console.log("this is user",user);
                 }
             })
             .catch((e) => console.log(e));
@@ -84,6 +88,19 @@ const ShowRecipes = () => {
             window.location.reload();
         }
     }
+
+    const buyHandler =async(e)=>{
+        e.preventDefault();
+
+        const response = await createbuyuser(buyuser);
+
+        if(response.state === 200){
+
+            alert("success");
+
+        }
+
+    } 
 
     return (
         <>
@@ -119,7 +136,7 @@ const ShowRecipes = () => {
                                         <div className="d-flex align-items-center">
                                             <FontAwesomeIcon icon={faCoins} size="2x" className="me-3" />
                                              <p className="my-auto text-capitalize fw-bold">
-                                                By : {item.amount}
+                                                 : {item.amount}
                                             </p>
                                         </div>
                                     </div>
@@ -227,7 +244,7 @@ const ShowRecipes = () => {
                                     }
 
                                     <div>
-                                        <form onSubmit={commentHandler} class="commentform">
+                                        <form onSubmit={commentHandler} className="commentform">
                                             <input type="text" className="form-control commentbars pe-5" value={inputData.comment} onChange={e =>
                                                 setInputData({ ...inputData, comment: e.target.value })
                                             } />
@@ -314,10 +331,10 @@ const ShowRecipes = () => {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h1
-                                className="text-secondary modal-title fs-5"
+                                className="text-dark modal-title fs-5"
                                 id="staticBackdropLabel"
                             >
-                               Buy this recipe
+                                Buy this recipe
                             </h1>
                             <button
                                 type="button"
@@ -327,7 +344,31 @@ const ShowRecipes = () => {
                             ></button>
                         </div>
                         <div className="modal-body text-secondary">
-                            will you buy this
+                            <h5 className="text-dark fw-bold text-center mb-3">{item.title}</h5>
+                            <div className="row">
+                                <div className="col-6">
+                                    <img src={item.image} alt="meal" className="w-100 rounded" />
+                                </div>
+                                <div className="col-6">
+                                    <div className="d-flex align-items-center text-dark mb-3">
+                                        <FontAwesomeIcon
+                                            icon={faCircleUser}
+                                            size="2x"
+                                            className="me-3"
+                                        />
+                                        <p className="my-auto text-capitalize fw-bold">
+                                            By : {item.user_name}
+                                        </p>
+                                    </div>
+
+                                    <div className="d-flex align-items-center text-dark mb-3">
+                                        <FontAwesomeIcon icon={faCoins} size="2x" className="me-3" />
+                                        <p className="my-auto text-capitalize fw-bold">
+                                            : {item.amount}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="modal-footer">
                             <button
@@ -337,14 +378,18 @@ const ShowRecipes = () => {
                             >
                                 Close
                             </button>
+                            <form action="" onSubmit={buyHandler}>
                             <button
-                                type="button"
+                                type="submit"
                                 className="btn btn-primary"
-                                
+
                                 data-bs-dismiss="modal"
+
+                               
                             >
                                 Buy
                             </button>
+                            </form>
                         </div>
                     </div>
                 </div>

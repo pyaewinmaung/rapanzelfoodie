@@ -53,9 +53,9 @@ const CreateRecipes = () => {
             const response = await createrecipes(formData);
 
             if (response.status === 200) {
-                // alert("success");
-                // console.log(response);
-
+                //  alert("success");
+                //  console.log(response);
+                
                 navigate("/recipes");
             }
 
@@ -142,7 +142,7 @@ const CreateRecipes = () => {
 
                             <div className="form-group mb-3">
                                 <label htmlFor="amount">Amount</label>
-                                <input type="text" name="amount" id="amount" className='form-control' value={inputData.amount} onChange={e =>
+                                <input type="number" name="amount" id="amount" className='form-control' value={inputData.amount} onChange={e =>
                                     setInputData({ ...inputData, amount: e.target.value })
                                 } />
                                 {error && error.amount && <span className='text-danger'>{error.amount}</span>}

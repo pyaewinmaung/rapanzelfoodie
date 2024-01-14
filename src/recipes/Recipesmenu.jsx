@@ -56,6 +56,7 @@ const Recipesmenu = () => {
       if (response.status === 200) {
 
         setPost(response.data.data)
+        // console.log(response);
       }
     }).catch(e => console.log(e))
 

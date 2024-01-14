@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className="pt-5 pb-2 footers">
         <div className="container text-center">
           <div className='row '>
-            <div className='col d-flex flex-column mt-3'>
+            <div className='col-5 d-flex flex-column mt-3'>
               <h5 className='text-uppercase mb-4 fw-bold'> Quick Link </h5>
               <ul className='list-inline text-start mx-auto'>
                 <li className=''><a href="#" className='text-decoration-none text-dark'>Home</a></li>
@@ -15,16 +15,7 @@ const Footer = () => {
                 <li className=''><a href="#" className='text-decoration-none text-dark'>About Us</a></li>
                 <li className=''><a href="#" className='text-decoration-none text-dark'>Contact</a></li>
               </ul>
-            </div>
-
-            <div className='col-4 mx-auto mt-3'>
-              <h5 className='text-uppercase mb-4 fw-bold'>Subscribe </h5>
-              <p className='mb-4 text-start'>Register and get notified about all the news & updates before it gets too late.</p>
-              <div className="d-flex">
-                <input type="text" className='rounded border-0' placeholder=' Your email address' />
-                <a href="#" className="btn bg-secondary-subtle mx-1">Sign up</a>
-              </div>
-            </div>
+            </div>          
 
             <div className='col-5 mx-auto mt-3 px-3'>
               <h5 className='text-uppercase mb-4 fw-bold'>Follow Us</h5>
@@ -45,7 +36,7 @@ const Footer = () => {
 
             <div className='row align-item-center'>
               <div className="text-center">
-                <p>Copyright @2023 All rights reserved by:<a href="#" className='text-decoration-none fw-bold text-dark'>FoodieRapanzal</a></p>
+                <p>Copyright @2023 All rights reserved by:<a href="#" className='text-decoration-none fw-bold text-dark'>FOODIE PANZEL</a></p>
               </div>
             </div>
           </div>
