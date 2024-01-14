@@ -20,6 +20,12 @@ const Navigation = () => {
 
 	}
 
+	const profileHandler = ()=>{
+
+		navigate('/profile');
+
+	}
+
 	useEffect(() => {
 		getuser().then((response) => {
 			if (response.status === 200) {
@@ -61,7 +67,7 @@ const Navigation = () => {
 									<input type="text" className="form-control-sm navsearchs" />
 								</form> */}
 
-								<div className="dropdown">
+								{/* <div className="dropdown">
 									<button className="btn btn-secondary p-0 rounded-circle" type="button" data-bs-toggle="dropdown" onClick={logoutHandler}>
 										<span className='text-lowercase fw-light'> {user.email}</span>
 									</button>
@@ -71,7 +77,11 @@ const Navigation = () => {
 										<li><hr className="dropdown-divider" /></li>
 										<li><a className="dropdown-item text-capitalize" href="#" onClick={logoutHandler}>Logout</a></li>
 									</ul>
-								</div>
+								</div> */}
+
+								<button type="button" className='btn btn-sm btn-info text-white me-4' onClick={profileHandler}>Profile</button>
+
+								<button type="button" className='btn btn-sm btn-primary' onClick={logoutHandler}>Logout</button>
 
 
 							</div>

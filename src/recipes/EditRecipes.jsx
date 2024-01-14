@@ -22,7 +22,7 @@ const EditRecipes = () => {
 
     // console.log(item);
 
-    const [inputData, setInputData] = useState({image:"" ,title: item.title, description: item.description, category_id: item.category_id, amount: item.amount, type: item.type });
+    const [inputData, setInputData] = useState({title: item.title, description: item.description, category_id: item.category_id, amount: item.amount, type: item.type });
 
     const navigate = useNavigate();
 
@@ -92,10 +92,10 @@ const EditRecipes = () => {
                                 </div>
                                 <form onSubmit={onHandleSubmit} action="" encType="multipart/form-data" >
 
-                                    <div className='form-group mb-3'>
+                                    {/* <div className='form-group mb-3'>
                                         <label htmlFor="image">Image</label>
                                         <input type="file" name="image" id="image" className='form-control' onChange={handleImageChange} />
-                                    </div>
+                                    </div> */}
 
                                     <div className="form-group mb-3">
                                         <label htmlFor="title">Title</label>
