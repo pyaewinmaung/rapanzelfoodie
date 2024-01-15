@@ -16,7 +16,7 @@ import { getcomment, postcomment } from "../api/comments";
 const ShowRecipes = () => {
     const location = useLocation();
     const item = location.state;
-    // console.log(item);
+    console.log(item);
     const [user, setUser] = useState("");
     const [comment, setComment] = useState([]);
     const [inputData, setInputData] = useState({ recipe_id: item.recipe_id, comment: '' })
@@ -118,7 +118,7 @@ const ShowRecipes = () => {
                                     <div className="d-flex align-items-center justify-content-between mb-3">
                                         <div className="d-flex align-items-center">
                                             <FontAwesomeIcon icon={faCoins} size="2x" className="me-3" />
-                                             <p className="my-auto text-capitalize fw-bold">
+                                            <p className="my-auto text-capitalize fw-bold">
                                                 By : {item.amount}
                                             </p>
                                         </div>
@@ -314,10 +314,10 @@ const ShowRecipes = () => {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h1
-                                className="text-secondary modal-title fs-5"
+                                className="text-dark modal-title fs-5"
                                 id="staticBackdropLabel"
                             >
-                               Buy this recipe
+                                Buy this recipe
                             </h1>
                             <button
                                 type="button"
@@ -327,7 +327,31 @@ const ShowRecipes = () => {
                             ></button>
                         </div>
                         <div className="modal-body text-secondary">
-                            will you buy this
+                            <h5 className="text-dark fw-bold text-center mb-3">{item.title}</h5>
+                            <div className="row">
+                                <div className="col-6">
+                                    <img src={item.image} alt="meal" className="w-100 rounded" />
+                                </div>
+                                <div className="col-6">
+                                    <div className="d-flex align-items-center text-dark mb-3">
+                                        <FontAwesomeIcon
+                                            icon={faCircleUser}
+                                            size="2x"
+                                            className="me-3"
+                                        />
+                                        <p className="my-auto text-capitalize fw-bold">
+                                            By : {item.user_name}
+                                        </p>
+                                    </div>
+
+                                    <div className="d-flex align-items-center text-dark mb-3">
+                                        <FontAwesomeIcon icon={faCoins} size="2x" className="me-3" />
+                                        <p className="my-auto text-capitalize fw-bold">
+                                            By : {item.amount}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="modal-footer">
                             <button
@@ -340,7 +364,7 @@ const ShowRecipes = () => {
                             <button
                                 type="button"
                                 className="btn btn-primary"
-                                
+
                                 data-bs-dismiss="modal"
                             >
                                 Buy
