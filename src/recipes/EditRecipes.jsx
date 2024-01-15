@@ -77,16 +77,14 @@ const EditRecipes = () => {
     return (
         <>
             <section className="margintops">
-                <div className="col-md-10 mx-auto">
+                <div className="col-md-6 mx-auto">
                     <div className="bg-white p-5 rounded">
 
                         <div className='row'>
 
-                            <div className='col-md-6'>
+          
 
-                            </div>
-
-                            <div className='col-md-6'>
+                            <div className='col-md-12'>
                                 <div className='d-flex justify-content-end'>
                                     <button className='btn btn-outline-secondary' onClick={backHandler}><FontAwesomeIcon icon={faX} /></button>
                                 </div>
@@ -120,7 +118,7 @@ const EditRecipes = () => {
                                         <select name="category" id="category" className='form-select' defaultValue={inputData.category_id} onChange={e => setInputData({ ...inputData, category_id: e.target.value })} >
                                             {category.length > 0 && (
                                                 category.map((item, idx) =>
-                                                    <option key={idx} value={++idx}>{item.category_name}</option>
+                                                    <option key={idx} value={++idx}>{item.category}</option>
                                                 )
                                             )}
                                         </select>

@@ -41,11 +41,13 @@ const ShowRecipes = () => {
         try {
             // Assuming you have a recipeId for the recipe you want to delete
             const recipeIdToDelete = item.id;
+            // console.log();
 
             const response = await deleterecipe(recipeIdToDelete);
 
             if (response.status === 200) {
                 navigate("/recipes");
+                window.location.reload();
             }
         } catch (e) {
             console.error("Error deleting recipe:", e);

@@ -31,6 +31,12 @@ const Bannerrecipe = () => {
     
     }
 
+    const viewHandler = () => {
+
+        navigate("/recipes");
+    
+    }
+
     useEffect(() => {
         getrecipes().then((response) => {
           if (response.status === 200) {
@@ -164,10 +170,16 @@ const Bannerrecipe = () => {
                             )}
 
                         </div>
+
+                        <div className='text-center'>
+                            <button className='btn btn-warning' onClick={viewHandler}>View all</button>
+                        </div>
                     </div>
 
                 </div>
             </section>
+
+          
 
             <Aboutrecipes />
 
