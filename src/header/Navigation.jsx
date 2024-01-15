@@ -79,9 +79,9 @@ const Navigation = () => {
 									</ul>
 								</div> */}
 
-								<button type="button" className='btn btn-sm btn-info text-white me-4' onClick={profileHandler}>Profile</button>
+								<button type="button" className='btn btn-sm btn-primary text-white me-4' onClick={profileHandler}>Profile</button>
 
-								<button type="button" className='btn btn-sm btn-primary' onClick={logoutHandler}>Logout</button>
+								<button type="button" className='btn btn-sm btn-danger' onClick={logoutHandler}>Logout</button>
 
 
 							</div>

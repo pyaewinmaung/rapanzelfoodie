@@ -17,8 +17,8 @@ const Popular = () => {
                             <Title titleone="Popular Recipes" titletwo="Savor the Flavor, Share the Love"/>
 
                             <Popularitem name="By Hanabi" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
-                            <Popularitem name="By Hanabi" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
-                            <Popularitem name="By Hanabi" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
+                            <Popularitem name="By Hhin Hin" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
+                            <Popularitem name="By Aung Aung" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" />
 
                         </div>
                         <div className="col-md-4">
