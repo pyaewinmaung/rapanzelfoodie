@@ -82,8 +82,10 @@ const Recipesmenu = () => {
           <div className='col-md-10 mx-auto'>
             <Title titleone="Recipes" titletwo="Create your recipes" />
 
-
-            <input type="text" name="title" className="form-control-sm navsearchs" value={find} onChange={handleChange} />
+            <div className='d-flex justify-content-center mb-5'>
+              <input type="text" name="title" className="form-control-sm navsearchs py-3" value={find} onChange={handleChange} />
+            </div>
+            
 
 
             {/* for recipies form  */}
