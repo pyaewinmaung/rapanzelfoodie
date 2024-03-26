@@ -7,7 +7,7 @@ const Recentimageitem = ({name,imagename}) => {
             <div className="col-6">
                 <div className="dissoves">
                     <img src={imagename} alt="desert" />
-                    <p class="recentnames">By {name}</p>
+                    <p className="recentnames">By {name}</p>
                 </div>
                 
             </div>

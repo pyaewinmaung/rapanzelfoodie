@@ -42,15 +42,10 @@ const Bannerrecipe = () => {
           if (response.status === 200) {
     
             const responseData = response.data.data;
-
-            // console.log(responseData);
-    
+            const limit = responseData.slice(0,6);
             if(responseData.length > 6){
-              const limit = responseData.slice(0,6);
-            //   console.log("this is limit",limit);
                 setPost(limit);
             }
-    
             setPost(limit);
           }
         }).catch(e => console.log(e))
@@ -127,7 +122,7 @@ const Bannerrecipe = () => {
            
 
             <div className='createresipes'>
-                <button type="button" className='creatresipesbtn shadow' onClick={buttonClick} >Create <i class="fa-solid fa-plus"></i></button>
+                <button type="button" className='creatresipesbtn shadow' onClick={buttonClick} >Create <i className="fa-solid fa-plus"></i></button>
             </div>
             <section className="margintops">
                 <div className="container">
@@ -141,8 +136,8 @@ const Bannerrecipe = () => {
                             {/* <Recipesitem name="By Anna" date="21/2/2023" title="Beef" text="Figma ipsum component variatn main layer. Text team line insert" /> */}
 
                             {post.length > 0 && (
-                                post.map((item) =>
-                                    <div className="col-lg-4 col-md-6 mb-5" key={item.id}>
+                                post.map((item, i) =>
+                                    <div className="col-lg-4 col-md-6 mb-5" key={i}>
                                         <div className="card border-0 recipescards">
                                             <div className='recipeimgs'>
                                                 <img src={item.image} alt="recipe1" />
