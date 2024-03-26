@@ -40,12 +40,12 @@ const ShowRecipes = () => {
     const deleteHandler = async () => {
         try {
             // Assuming you have a recipeId for the recipe you want to delete
-            const recipeIdToDelete = item.id;
-            // console.log();
+            const recipeIdToDelete = item.recipe_id;
 
             const response = await deleterecipe(recipeIdToDelete);
 
             if (response.status === 200) {
+                alert("Recipe Deleting Success");
                 navigate("/recipes");
                 window.location.reload();
             }
