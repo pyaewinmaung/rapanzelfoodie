@@ -13,7 +13,7 @@ const Aboutrecipes = () => {
                         <div className='col-md-7 mx-auto'>
                             <div>
                                 <h2> Everyone can be a chef in their on kitchen</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi fugit facere accusantium mollitia expedita labore pariatur ut, ipsa sed nostrum esse autem illum vero beatae est. Modi deserunt esse quis.</p>
+                                <p>In today's world, where cooking shows, online tutorials, and diverse culinary resources abound, individuals have unprecedented opportunities to explore and experiment with ingredients, techniques, and flavors in their own kitchens.</p>
                             </div>
                             
                             <button className='btn btn-warning text-white mb-4'>Learn More</button>

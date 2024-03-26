@@ -645,7 +645,11 @@ header {
 /* subscribe  */
 .subscribes {
   background-image: url('/vegetables-3193197_1280.jpg');
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
+}
+
+.subscribe {
+  margin-left: 10rem;
 }
 
 .icon-boxs {
