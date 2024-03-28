@@ -17,6 +17,7 @@ const Login = () => {
           // alert(response.data.data.token);
 
           localStorage.setItem('token',response.data.data.token);
+          localStorage.setItem('id', response.data.data.id);
 
           // console.log();
 

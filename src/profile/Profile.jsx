@@ -6,8 +6,10 @@ import Title from "../components/titles/Title";
 const Profile = () => {
   const [post, setPost] = useState([]);
 
+  const id = localStorage.getItem("id");
+
   useEffect(() => {    
-    getbuyuser(1)
+    getbuyuser(id)
       .then((response) => {
         if (response.status === 200) {
         //   console.log(response);

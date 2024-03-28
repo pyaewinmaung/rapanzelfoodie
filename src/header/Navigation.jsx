@@ -10,6 +10,8 @@ const Navigation = () => {
 
 	const [isShow, setIsShow] = useState(false);
 
+	const [dropdown, setDropDown] = useState(false);
+
 	const token = localStorage.getItem("token");
 
 	const navigate = useNavigate();
@@ -17,6 +19,7 @@ const Navigation = () => {
 	const logoutHandler = () => {
 
 		localStorage.removeItem('token');
+		localStorage.removeItem('id');
 
 		navigate('/login');
 		window.location.reload();
@@ -70,8 +73,8 @@ const Navigation = () => {
 								<Navitem navname="About Us" navlink="about" />
 								<Navitem navname="Contact" navlink="contact" />
 							</ul>
-
-							<div className='relative'>
+							
+							{/* <div className='relative'>
 								<button className="btn bg-transparent" type="button" data-bs-toggle="dropdown" onClick={() => setIsShow(!isShow)}>
 									<span className='fs-2'> <BsPersonCircle /></span>
 								</button>
@@ -84,7 +87,26 @@ const Navigation = () => {
 									<li><hr className="dropdown-divider" /></li>
 									<li><a className="dropdown-item text-capitalize" onClick={logoutHandler}>Logout</a></li>
 								</ul>
-							</div>
+							</div> */}
+
+{token ? (
+	<div className='relative'>
+		<button className="btn bg-transparent" type="button" data-bs-toggle="dropdown" onClick={() => setIsShow(!isShow)}>
+			<span className='fs-2'> <BsPersonCircle /></span>
+		</button>
+
+		<ul className={`dropdown-menu dropbtns ${isShow ? 'd-block end-0' : ''}`}>
+			<li><a className="dropdown-item text-lowercase">{user.email}</a></li>
+			<li><hr className="dropdown-divider" /></li>
+			<li><a className="dropdown-item text-capitalize cursor-poiter" onClick={myHandler}>My Recipes</a></li>
+			<li><a className="dropdown-item text-capitalize cursor-poiter" onClick={buyHandler}>Buy Recipes</a></li>
+			<li><hr className="dropdown-divider" /></li>
+			<li><a className="dropdown-item text-capitalize" onClick={logoutHandler}>Logout</a></li>
+		</ul>
+	</div>
+) : (
+	""
+)}
 						</div>
 					</nav>
 				</div>

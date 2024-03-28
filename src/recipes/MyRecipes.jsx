@@ -21,6 +21,8 @@ const Recipesmenu = () => {
   const [post, setPost] = useState([]);
   const [find, setFind] = useState("");
 
+  const id = localStorage.getItem("id");
+
   // const token = localStorage.getItem('token');
 
   // console.log(token);
@@ -48,7 +50,7 @@ const Recipesmenu = () => {
   };
 
   useEffect(() => {
-    getRecipesByUser(1)
+    getRecipesByUser(id)
       .then((response) => {
         if (response.status === 200) {
           setPost(response.data.data);
