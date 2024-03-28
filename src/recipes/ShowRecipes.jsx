@@ -142,8 +142,25 @@ const ShowRecipes = () => {
                       size="2x"
                       className="me-3"
                     />{" "}
-                    Category : {item.category_name}
+                    <span className="fw-bold">Category :</span> {item.category_name}
                   </p>
+
+                  <div className="d-flex align-items-center justify-content-between mb-3">
+                    <div className="d-flex align-items-center">                    
+                      <FontAwesomeIcon 
+                        icon="fa-solid fa-calendar-days"  
+                        size="2x"
+                        className="me-3" 
+                      />
+                      <p className="my-auto text-capitalize">
+                        <span className="fw-bold">Date :</span> {new Date(item.created_at).toLocaleDateString('en-GB', {
+                                day: '2-digit',
+                                month: '2-digit',
+                                year: 'numeric'
+                              })}
+                      </p>
+                    </div>
+                  </div>
 
                   {item.type === "premium" ? (
                     <div className="mb-3">

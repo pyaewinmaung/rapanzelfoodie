@@ -53,7 +53,13 @@ const Popular = () => {
                             <span className="text-black-50">By : {item.user_name}</span>
                           </div>
                           <div>
-                            {/* <span>{item.created_at}</span> */}
+                            <span>
+                              {new Date(item.created_at).toLocaleDateString('en-GB', {
+                                day: '2-digit',
+                                month: '2-digit',
+                                year: 'numeric'
+                              })}
+                            </span>
                           </div>
                         </div>
                         <p className="h5 fw-bold">{item.title}</p>
