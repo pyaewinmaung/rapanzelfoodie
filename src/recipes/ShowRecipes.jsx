@@ -23,7 +23,7 @@ const ShowRecipes = () => {
     recipe_id: item.recipe_id,
     comment: "",
   });
-  
+
   const buyuser = { user_id: user.id, recipe_id: item.recipe_id };
 
   const navigate = useNavigate();
@@ -83,12 +83,13 @@ const ShowRecipes = () => {
   };
 
   const buyHandler = async (e) => {
+    
     e.preventDefault();
-
     const response = await createbuyuser(buyuser);
 
     if (response.state === 200) {
-      alert("success");
+      alert("Buy Successfully!");
+      navigate("/recipes");
     }
   };
 
@@ -130,7 +131,7 @@ const ShowRecipes = () => {
                         className="me-3"
                       />
                       <p className="my-auto text-capitalize fw-bold">
-                        : {item.amount}
+                        Price : {item.amount} Ks
                       </p>
                     </div>
                   </div>

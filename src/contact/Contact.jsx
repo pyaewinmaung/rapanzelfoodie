@@ -10,9 +10,9 @@ const Contact = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
       />
 
-      <div className="container1 mx-auto">
+      <div className="container1 mx-auto mb-5">
       <h3 className="text-center fw-bold"> Contact Form </h3>
-        <div className="content">
+        <div className="content ">
           <div className="left-side">
             <div className="address details">
               <i className="fas fa-map-marker-alt"></i>
