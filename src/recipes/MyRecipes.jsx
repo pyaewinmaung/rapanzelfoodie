@@ -57,12 +57,6 @@ const Recipesmenu = () => {
       })
       .catch((e) => console.log(e));
   }, []);
-  // function showClick(item){
-  //   navigate("/show",{state: item})
-  // }
-
-  // console.log(post.data[0].title);
-  // console.log(post.data[0].category.category);
 
   console.log();
 

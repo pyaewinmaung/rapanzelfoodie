@@ -22,7 +22,7 @@ const Popularitem = () => {
                     <p className="h5 fw-bold">Bean Slad</p>
                     <p className="text-muted">Figma ipsum component variant main layer. Text team line insert.</p>
 
-                    <Button name="Buy" />
+                    <Button name="Detail" />
                 </div>
             </div>
         </>
