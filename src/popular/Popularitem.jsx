@@ -1,5 +1,5 @@
 import React from 'react'
-import seafood from '../assets/img/receipes/seafood.jpg'
+import seafood from '../assets/img/receipes/meal.jpg'
 import Button from '../components/buttons/Button'
 
 

@@ -25,7 +25,7 @@ const Navigation = () => {
 
 	const myHandler = () => {
 
-		navigate('/recipes');
+		navigate('/myrecipes');
 
 	}
 

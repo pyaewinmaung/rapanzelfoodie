@@ -17,6 +17,7 @@ import ShowRecipes from "./recipes/ShowRecipes";
 import Register from "./auth/register/Register";
 import EditRecipes from "./recipes/EditRecipes";
 import Profile from "./profile/Profile";
+import MyRecipes from "./recipes/MyRecipes";
 
 
 const App = () => {
@@ -34,9 +35,6 @@ const App = () => {
 
   return (
     <>
-
-
-
       <Navigation />
       <Routes>
         {/* <Route path="/" elemtent={<Navigation />} /> */}
@@ -63,6 +61,7 @@ const App = () => {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/profile" element={<Profile/>} />
+            <Route path="/myrecipes" element={<MyRecipes/>} />
           </>
         )}
 

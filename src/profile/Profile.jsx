@@ -24,7 +24,7 @@ const Profile = () => {
       <section className="margintops">
         <div className="container">
           <div className="col-md-10 mx-auto">
-            <Title titleone="Recipes" titletwo="Your recipes" />
+            <Title titleone="Buy Recipes" titletwo="Recipes" />
 
             {/* for recipies form  */}
 
