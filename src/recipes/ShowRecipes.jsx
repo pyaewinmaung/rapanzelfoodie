@@ -83,13 +83,13 @@ const ShowRecipes = () => {
   };
 
   const buyHandler = async (e) => {
-    
+
     e.preventDefault();
     const response = await createbuyuser(buyuser);
 
-    if (response.state === 200) {
+    if (response.status === 200) {
       alert("Buy Successfully!");
-      navigate("/recipes");
+      navigate("/recipes");      
     }
   };
 

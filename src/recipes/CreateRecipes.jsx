@@ -60,8 +60,6 @@ const CreateRecipes = () => {
         setError(e.response.data.data);
       }
     }
-
-    // console.log(inputData);
   };
 
   const backHandler = () => {

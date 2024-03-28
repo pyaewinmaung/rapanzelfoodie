@@ -68,14 +68,9 @@ const EditRecipes = () => {
     navigate(-1);
   };
 
-//   const handleImageChange = (event) => {
-//     const selectedImage = event.target.files[0];
-//     setImage(selectedImage);
-//   };
-
   return (
     <>
-      <section className="margintops">
+      <section className="margintops mb-5">
         <div className="col-md-6 mx-auto">
           <div className="bg-white p-5 rounded">
             <div className="row">
