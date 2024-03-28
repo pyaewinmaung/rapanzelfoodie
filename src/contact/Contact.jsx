@@ -10,15 +10,15 @@ const Contact = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
       />
 
-      <div className="container1 mx-auto">
+      <div className="container1 mx-auto mb-5">
       <h3 className="text-center fw-bold"> Contact Form </h3>
-        <div className="content">
+        <div className="content ">
           <div className="left-side">
             <div className="address details">
               <i className="fas fa-map-marker-alt"></i>
               <div className="topic">Address</div>
-              <div className="text-one">Surkhet, NP12</div>
-              <div className="text-two">Birendranagar 06</div>
+              <div className="text-one">Building (19),4th floor, MICT Park,</div>
+              <div className="text-two">Hlaing Township, Yangon, Myanmar.</div>
             </div>
             <div className="phone details">
               <i className="fas fa-phone-alt"></i>
@@ -29,8 +29,7 @@ const Contact = () => {
             <div className="email details">
               <i className="fas fa-envelope"></i>
               <div className="topic">Email</div>
-              <div className="text-one">codinglab@gmail.com</div>
-              <div className="text-two">info.codinglab@gmail.com</div>
+              <div className="text-one">foodiepanzel@gmail.com</div>
             </div>
           </div>
           <div className="right-side">

@@ -5,12 +5,13 @@ const Accessibility = () => {
    <>
     <section className='py-5'>
 
-      <div className='col-md-6 mx-auto policys'>
+      <div className='col-md-8 mx-auto policys'>
+      <h2 className='text-center fw-bold'>Accessibility Policy</h2>
         <ol className='list-group list-group-flush'>
         <li className='list-group-item'> 
           <p className='fw-bold'>1 Commitment to Accessibility </p>
           <p>- FoodieRapanzel is committed to providing an accessible experience for all users, including those with disabilities.</p>
-      </li>
+        </li>
 
       <li className='list-group-item'> 
         <p className='fw-bold'> 2. Accessibility Standards </p>
