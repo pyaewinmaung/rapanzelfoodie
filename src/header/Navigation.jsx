@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Navitem from './Navitem'
 import { useNavigate } from 'react-router-dom';
 import { getuser } from '../api/getuser';
+import { BsPersonCircle } from 'react-icons/bs';
 
 const Navigation = () => {
 
 	const [user, setUser] = useState("");
+
+	const [isShow, setIsShow] = useState(false);
 
 	const token = localStorage.getItem("token");
 
@@ -20,7 +23,13 @@ const Navigation = () => {
 
 	}
 
-	const profileHandler = ()=>{
+	const myHandler = () => {
+
+		navigate('/recipes');
+
+	}
+
+	const buyHandler = () => {
 
 		navigate('/profile');
 
@@ -62,36 +71,21 @@ const Navigation = () => {
 								<Navitem navname="Contact" navlink="contact" />
 							</ul>
 
-							<div>
-								{/* <form action="" class="me-md-3">
-									<input type="text" className="form-control-sm navsearchs" />
-								</form> */}
+							<div className='relative'>
+								<button className="btn bg-transparent" type="button" data-bs-toggle="dropdown" onClick={() => setIsShow(!isShow)}>
+									<span className='fs-2'> <BsPersonCircle /></span>
+								</button>
 
-								{/* <div className="dropdown">
-									<button className="btn btn-secondary p-0 rounded-circle" type="button" data-bs-toggle="dropdown" onClick={logoutHandler}>
-										<span className='text-lowercase fw-light'> {user.email}</span>
-									</button>
-
-									<ul className="dropdown-menu dropbtns">
-										<li><a className="dropdown-item text-capitalize" href="#">Profile</a></li>
-										<li><hr className="dropdown-divider" /></li>
-										<li><a className="dropdown-item text-capitalize" href="#" onClick={logoutHandler}>Logout</a></li>
-									</ul>
-								</div> */}
-
-								<button type="button" className='btn btn-sm btn-primary text-white me-4' onClick={profileHandler}>Profile</button>
-
-								<button type="button" className='btn btn-sm btn-danger' onClick={logoutHandler}>Logout</button>
-
-
+								<ul className={`dropdown-menu dropbtns ${isShow ? 'd-block end-0' : ''}`}>
+									<li><a className="dropdown-item text-lowercase">{user.email}</a></li>
+									<li><hr className="dropdown-divider" /></li>
+									<li><a className="dropdown-item text-capitalize cursor-poiter" onClick={myHandler}>My Recipes</a></li>
+									<li><a className="dropdown-item text-capitalize cursor-poiter" onClick={buyHandler}>Buy Recipes</a></li>
+									<li><hr className="dropdown-divider" /></li>
+									<li><a className="dropdown-item text-capitalize" onClick={logoutHandler}>Logout</a></li>
+								</ul>
 							</div>
-
-
 						</div>
-
-
-
-
 					</nav>
 				</div>
 				{/* End nav bar  */}

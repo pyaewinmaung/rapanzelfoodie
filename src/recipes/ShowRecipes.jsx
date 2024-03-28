@@ -364,8 +364,8 @@ const ShowRecipes = () => {
                       size="2x"
                       className="me-3"
                     />
-                    <p className="my-auto text-capitalize fw-bold">
-                      : {item.amount}
+                    <p className="my-auto text-capitalize fw-bold">              
+                     Price : {item.amount} Ks
                     </p>
                   </div>
                 </div>
