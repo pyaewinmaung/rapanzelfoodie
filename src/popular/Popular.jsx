@@ -36,7 +36,7 @@ const Popular = () => {
             <div className="col-md-8 bg-white rounded">            
               <Title titleone="Popular Recipes" titletwo="Savor the Flavor, Share the Love"/>
               {post.length > 0 &&
-                post.map((item) => (
+               post.slice(0, 3).map((item) => (
                   <div className="" key={item.id}>
                     <div className="row mb-5">
                       <div className="col-6">
@@ -65,7 +65,7 @@ const Popular = () => {
                         <p className="h5 fw-bold">{item.title}</p>
                         <p className="text-muted">
                           {" "}
-                          {item.description?.substring(0, 50) + "....."}
+                          {item.description?.substring(0, 150) + "....."}
                         </p>
                         <div className="card-footer bg-white">
                           <Button name="Detail" clickname={item} />
